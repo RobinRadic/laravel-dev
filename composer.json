@@ -1,0 +1,45 @@
+{
+    "name": "laradic/dev",
+    "description": "Laravel 5 dev package contains test, benchmark and debug extras",
+    "homepage": "https://github.com/laradic/dev",
+    "keywords": [
+        "bench",
+        "debug",
+        "benchmark",
+        "generator",
+        "test",
+        "testing",
+
+        "laravel"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Robin Radic",
+            "email": "robin@radic.nl",
+            "role": "Package Author/Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=5.4.0",
+        "laradic/support": "*",
+        "gooh/interface-distiller": "dev-master",
+        "laravel/framework": "5.0.*",
+        "orchestra/testbench": "3.0.*",
+        "mockery/mockery": "~0.9.3",
+        "barryvdh/laravel-ide-helper": "2.*",
+        "barryvdh/laravel-debugbar": "2.*",
+        "raveren/kint": "0.9.*",
+        "athletic/athletic": "~0.1",
+        "tracy/tracy": "2.3.*"
+    },
+    "scripts": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Laradic\\Dev\\": ""
+        }
+    }
+}
