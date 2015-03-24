@@ -16,6 +16,7 @@ class Booter
     {
         require $baseDir . '/bootstrap/autoload.php';
 
+        /** @var \Illuminate\Foundation\Application $app */
         $app = require_once $baseDir . '/bootstrap/app.php';
 
         $app->bind('path.public', function () use ($baseDir)
@@ -35,17 +36,20 @@ class Booter
         });
 
 
+        #$app->boot();
 
         $kernel = $app->make('Illuminate\Contracts\Http\Kernel');
+#$kernel->bootstrap();
 
         $response = $kernel->handle(
             $request = Illuminate\Http\Request::capture()
-        );
+       );
+
 
 
 
         /** @var \Illuminate\Filesystem\Filesystem $fs */
-        $fs = $app->make('Illuminate\Filesystem\Filesystem');
+        $fs = $app->make('files');
 
         $fs->makeDirectory($tempDir, 0777, true);
 

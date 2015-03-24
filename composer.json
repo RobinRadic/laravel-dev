@@ -33,7 +33,9 @@
         "barryvdh/laravel-debugbar": "2.*",
         "raveren/kint": "0.9.*",
         "athletic/athletic": "~0.1",
-        "tracy/tracy": "2.3.*"
+        "tracy/tracy": "2.3.*",
+        "laradic/extensions": "dev-master",
+        "laradic/admin": "dev-master"
     },
     "scripts": {
     },
