@@ -14,6 +14,8 @@ class DevServiceProvider extends ServiceProvider
     /** @inheritdoc */
     protected $configFiles = ['radic_dev'];
 
+    protected $resourcesPath = '/resources';
+
     /** @inheritdoc */
     protected $dir = __DIR__;
 

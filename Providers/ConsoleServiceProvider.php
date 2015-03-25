@@ -6,6 +6,7 @@ class ConsoleServiceProvider extends AbstractConsoleProvider
 {
     protected $namespace = 'Laradic\Dev\Console';
     protected $commands = [
-        'Dev' => 'commands.radic.dev'
+        'Dev' => 'commands.laradic.dev',
+        'GenerateDoc' => 'commands.laradic.generatedoc'
     ];
 }
