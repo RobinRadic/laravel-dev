@@ -1,22 +1,23 @@
-<?php namespace Laradic\Dev;
-
-    /**
-     * Part of the Radic packges.
-     * Licensed under the MIT license.
-     *
-     * @package        dev9
-     * @author         Robin Radic
-     * @license        MIT
-     * @copyright  (c) 2011-2015, Robin Radic
-     * @link           http://radic.mit-license.org
-     */
+<?php
 /**
- * Should
+ * Part of the Robin Radic's PHP packages.
  *
- * @package Laradic\Dev${NAME}
+ * MIT License and copyright information bundled with this package
+ * in the LICENSE file or visit http://radic.mit-license.com
  */
+namespace Laradic\Dev;
 
-class Should extends TestFacade
+/**
+ * This is the Should class.
+ *
+ * @package        Dev
+ * @version        1.0.0
+ * @author         Robin Radic
+ * @license        MIT License
+ * @copyright      2015, Robin Radic
+ * @link           https://github.com/robinradic
+ */
+class Should extends AbstractTestFacadeCase
 {
 
     protected $aliases = array(
