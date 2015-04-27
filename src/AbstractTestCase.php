@@ -88,7 +88,7 @@ abstract class AbstractTestCase extends OrchestraTestCase
      */
     protected function getEnvironmentSetUp($app)
     {
-        $config = $this->getConfig();
+        $config = $app->make('config');
         $config->set('cache.driver', 'array');
         $config->set('database.default', 'sqlite');
         $config->set(
@@ -103,7 +103,7 @@ abstract class AbstractTestCase extends OrchestraTestCase
         $config->set('session.driver', 'array');
 
 
-        $this->command('migrate');
+        #$app->call('command.migrate');
         $app->make('mailer')->pretend(true);
     }
 }
