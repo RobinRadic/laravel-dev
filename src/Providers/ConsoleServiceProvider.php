@@ -1,8 +1,8 @@
 <?php namespace Laradic\Dev\Providers;
 
-use Laradic\Support\AbstractConsoleProvider;
+use Laradic\Console\AggregateConsoleProvider;
 
-class ConsoleServiceProvider extends AbstractConsoleProvider
+class ConsoleServiceProvider extends AggregateConsoleProvider
 {
     protected $namespace = 'Laradic\Dev\Console';
     protected $commands = [

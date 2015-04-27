@@ -3,7 +3,7 @@
 namespace Laradic\Dev;
 
 use Illuminate\Foundation\Application;
-use Laradic\Support\Str;
+use Laradic\Support\String;
 
 abstract class AbstractTestPackage
 {
@@ -18,7 +18,7 @@ abstract class AbstractTestPackage
             if($this->destroyed) break;
 
 
-            if(Str::startsWith($method, 'test')){
+            if(String::startsWith($method, 'test')){
                 $this->$method();
             }
         }

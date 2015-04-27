@@ -17,7 +17,7 @@ class DevServiceProvider extends ServiceProvider
     protected $resourcesPath = '/resources';
 
     /** @inheritdoc */
-    protected $dir = __DIR__;
+    protected $dir = __DIR__ .'/../';
 
     /** @inheritdoc */
     public function boot()

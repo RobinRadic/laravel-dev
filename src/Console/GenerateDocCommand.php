@@ -1,10 +1,10 @@
 <?php namespace Laradic\Dev\Console;
 
-use Laradic\Support\AbstractConsoleCommand;
+use Laradic\Console\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 
-class GenerateDocCommand extends AbstractConsoleCommand
+class GenerateDocCommand extends Command
 {
 
     /**
@@ -28,7 +28,8 @@ class GenerateDocCommand extends AbstractConsoleCommand
      */
     public function fire()
     {
-        $this->generateMethodsFromClasses(['Underscore\Methods\StringMethods', 'Stringy\Stringy']);
+        #$this->generateMethodsFromClasses(['Underscore\Methods\StringMethods', 'Stringy\Stringy']);
+        $this->generateMethodsFromClasses(['Illuminate\Support\Arr', 'Underscore\Methods\ArraysMethods']);
     }
 
     protected function generateMethodsFromClasses($classes)

@@ -24,24 +24,14 @@
     "prefer-stable": true,
     "require": {
         "php": ">=5.4.0",
-        "laradic/support": "*",
         "gooh/interface-distiller": "dev-master",
-        "laravel/framework": "5.0.*",
         "orchestra/testbench": "3.0.*",
         "mockery/mockery": "~0.9.3",
-        "barryvdh/laravel-ide-helper": "2.*",
-        "barryvdh/laravel-debugbar": "2.*",
-        "raveren/kint": "0.9.*",
-        "athletic/athletic": "~0.1",
-        "tracy/tracy": "2.3.*",
-        "laradic/extensions": "dev-master",
-        "laradic/admin": "dev-master"
-    },
-    "scripts": {
+        "athletic/athletic": "~0.1"
     },
     "autoload": {
         "psr-4": {
-            "Laradic\\Dev\\": ""
+            "Laradic\\Dev\\": "src/"
         }
     }
 }
