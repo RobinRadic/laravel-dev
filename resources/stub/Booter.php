@@ -14,10 +14,10 @@ class Booter
     /** @return \Illuminate\Foundation\Application */
     public static function create($baseDir, $tempDir)
     {
-        require $baseDir . '/bootstrap/autoload.php';
+        require $baseDir . '/app/bootstrap/autoload.php';
 
         /** @var \Illuminate\Foundation\Application $app */
-        $app = require_once $baseDir . '/bootstrap/app.php';
+        $app = require_once $baseDir . '/app/bootstrap/app.php';
 
         $app->bind('path.public', function () use ($baseDir)
         {

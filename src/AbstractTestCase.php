@@ -106,4 +106,30 @@ abstract class AbstractTestCase extends OrchestraTestCase
         #$app->call('command.migrate');
         $app->make('mailer')->pretend(true);
     }
+
+    protected function createTestingEnv($dir)
+    {
+        /** @var \Illuminate\Foundation\Application $app */
+        $app = $this->app;
+        $baseDir = base_path($dir);
+
+        $app->bind('path.public', function () use ($baseDir)
+        {
+            return $baseDir . '/public';
+        });
+
+        $app->bind('path.base', function () use ($baseDir)
+        {
+            return $baseDir;
+        });
+
+
+        $app->bind('path.storage', function () use ($baseDir)
+        {
+            return $baseDir . '/storage';
+        });
+
+        $app->flush();
+
+    }
 }
