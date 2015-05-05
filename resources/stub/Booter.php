@@ -36,16 +36,6 @@ class Booter
         });
 
 
-        #$app->boot();
-
-        $kernel = $app->make('Illuminate\Contracts\Http\Kernel');
-#$kernel->bootstrap();
-
-        $response = $kernel->handle(
-            $request = Illuminate\Http\Request::capture()
-       );
-
-
 
 
         /** @var \Illuminate\Filesystem\Filesystem $fs */
@@ -86,6 +76,23 @@ class Booter
         $mgr->setSource('sqlite');
         $mgr->createRepository();
         $mg->run($baseDir.'/database/migrations');
+
+
+
+
+        #$app->boot();
+
+        $kernel = $app->make('Illuminate\Contracts\Http\Kernel');
+#$kernel->bootstrap();
+
+        $response = $kernel->handle(
+            $request = Illuminate\Http\Request::capture()
+        );
+
+
+
+
+
 
         static::$tempDir = $tempDir;
         return static::$app =$app;
